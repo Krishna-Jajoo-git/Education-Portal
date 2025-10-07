@@ -1,0 +1,111 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background is already applied inline in index.html */
+
+/* Centered Login Box */
+.auth-box {
+  background: rgba(20, 20, 20, 0.9);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  width: 380px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Title */
+.auth-box h2 {
+  color: #ffa500;
+  font-size: 28px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Subtitle */
+.auth-box p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+/* Input Fields */
+.auth-box input[type="text"],
+.auth-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  background: #2a2a2a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.auth-box input::placeholder {
+  color: #aaa;
+}
+
+/* Password field with eye icon */
+.password-field {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.eye-icon:hover {
+  color: #ffa500;
+}
+
+/* Checkbox Label */
+.auth-box label {
+  font-size: 13px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+/* Primary Button */
+.btn-primary {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #ffa500;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #ff8c00;
+  transform: translateY(-2px);
+}
+
+/* Links */
+.btn-link {
+  color: #ffa500;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,135 @@
+/* ----------------------------------------------
+   Shared Course Info Page Styles (Public + Logged)
+   Theme: FDA Learning Portal (matches style1.css)
+---------------------------------------------- */
+
+/* Page Base */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafc;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #0a5fd8;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #0a5fd8;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* Course Info Section */
+.course-info {
+  max-width: 1000px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.course-info:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.course-info h2 {
+  font-size: 2rem;
+  color: #0a5fd8;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0a5fd8;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Course Image */
+.course-info img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* Description */
+.course-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #444;
+}
+
+/* Details List */
+.course-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 20px 0;
+}
+
+.course-info ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+}
+
+/* Enroll / Continue Buttons */
+.btn-primary {
+  background-color: #0a5fd8;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #084bb1;
+}
+
+/* View Details / Secondary Buttons */
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #0a5fd8;
+  color: #0a5fd8;
+}
+
+.btn-secondary:hover {
+  background-color: #0a5fd8;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .course-info {
+    padding: 25px;
+  }
+  .course-info h2 {
+    font-size: 1.6rem;
+  }
+  .course-info img {
+    max-height: 300px;
+  }
+}

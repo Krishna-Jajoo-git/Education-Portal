@@ -1,0 +1,274 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0d0d0d; /* Dark theme background */
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Navbar */
+.navbar {
+  background: #111;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #ffa500;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  float: right;
+}
+
+.nav-links a {
+  color: #ddd;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffa500;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url("../assets/images/hero.png") no-repeat center center/cover;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 550px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #ffa500;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #f5f5f5;
+}
+
+.btn-primary {
+  background: #ffa500;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #ff8c00;
+}
+
+.hero-image img {
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 70px 0;
+  text-align: center;
+  background: #0d0d0d;
+}
+
+.courses-section h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #ffa500;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.course-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffa500;
+}
+
+.course-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: #ffa500;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #ff8c00;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* Filter Section */
+.filter-section {
+  background: #0d0d0d;
+  padding: 50px 0 20px;
+  text-align: center;
+}
+
+.filter-title {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #ffa500;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 10px 15px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #1a1a1a;
+  color: #eee;
+  min-width: 180px;
+  transition: 0.3s;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #ffa500;
+  outline: none;
+}
+
+/* === Roadmap Sidebar Layout === */
+.courses-layout {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.course-grid {
+  flex: 1 1 60%;
+}
+
+.roadmap-sidebar {
+  flex: 1 1 30%;
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  color: #f0f0f0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.roadmap-sidebar h3 {
+  color: #ffa500;
+  font-size: 22px;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #333;
+}
+
+.roadmap-sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.roadmap-sidebar ul li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #333;
+  font-size: 15.5px;
+}
+
+.roadmap-sidebar ul li:last-child {
+  border-bottom: none;
+}
+
+.roadmap-sidebar ul li::before {
+  content: "➤ ";
+  color: #ffa500;
+  margin-right: 6px;
+}

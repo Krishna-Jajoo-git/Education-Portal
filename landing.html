@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FDA Learning Portal - Home</title>
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="landing.html">FDA Learning Portal</a>
+      </div>
+      <nav class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="index.html">Sign In</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Empowering Learning for Everyone</h1>
+        <p>Join thousands of students learning new skills with FDA Learning Portal.</p>
+        <a href="#courses" class="btn-primary">Explore Courses</a>
+      </div>
+      <div class="hero-image">
+        <img src="layer-11.png" alt="Learning Illustration">
+      </div>
+    </div>
+  </section>
+
+  <!-- Search & Filters -->
+  <section class="filter-section">
+    <div class="container">
+      <h2 class="filter-title">Explore Courses</h2>
+      <div class="filter-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Graphic Design">Graphic Design</option>
+        </select>
+
+        <select id="levelFilter">
+          <option value="all">Level</option>
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="advanced">Advanced</option>
+        </select>
+
+        <select id="priceFilter">
+          <option value="all">Price</option>
+          <option value="free">Free</option>
+          <option value="paid">Paid</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses-section">
+    <div class="container">
+      <h2>Our Popular Courses</h2>
+      <div class="course-grid">
+        <div class="course-card">
+          <img src="webdev.jpg" alt="Course 1">
+          <h3>Web Development</h3>
+          <p>Learn HTML, CSS, JavaScript, and modern frameworks to build responsive websites.</p>
+          <a href="course-info.html?course=webdev" class="btn-secondary">View Details</a>
+        </div>
+
+        <div class="course-card">
+          <img src="ds.jpg" alt="Course 2">
+          <h3>Data Science</h3>
+          <p>Master Python, data visualization, and machine learning with real-world projects.</p>
+          <a href="course-info.html?course=datasci" class="btn-secondary">View Details</a>
+        </div>
+
+        <div class="course-card">
+          <img src="gd.jpg" alt="Course 3">
+          <h3>Graphic Design</h3>
+          <p>Unleash your creativity with Adobe Photoshop, Illustrator, and design principles.</p>
+          <a href="course-info.html?course=graphic" class="btn-secondary">View Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extra Courses Section -->
+  <section id="extra-courses" class="extra-courses-section">
+    <div class="container">
+      <h2>Free Courses</h2>
+      <div class="course-grid">
+        <div class="course-card">
+          <h3>Intro to HTML</h3>
+          <p>Complete beginner's guide to web structure.</p>
+        </div>
+        <div class="course-card">
+          <h3>Basics of Python</h3>
+          <p>Learn Python fundamentals in easy steps.</p>
+        </div>
+      </div>
+
+      <h2 style="margin-top:40px;">Premium Courses</h2>
+      <div class="course-grid">
+        <div class="course-card premium">
+          <h3>Advanced JavaScript</h3>
+          <p>First 2 lessons free, subscribe to unlock the rest.</p>
+          <a href="index.html" class="btn-secondary">Subscribe</a>
+        </div>
+        <div class="course-card premium">
+          <h3>Data Science with Python</h3>
+          <p>First 2 lessons free, subscribe to unlock the rest.</p>
+          <a href="index.html" class="btn-secondary">Subscribe</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FDA Learning Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Filter Script -->
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const levelFilter = document.getElementById("levelFilter");
+    const priceFilter = document.getElementById("priceFilter");
+    const courseCards = document.querySelectorAll(".course-card");
+
+    function filterCourses() {
+      const searchText = searchInput.value.toLowerCase();
+      const categoryValue = categoryFilter.value.toLowerCase();
+      const levelValue = levelFilter.value.toLowerCase();
+      const priceValue = priceFilter.value.toLowerCase();
+
+      courseCards.forEach(card => {
+        const title = card.querySelector("h3").innerText.toLowerCase();
+        const description = card.querySelector("p") ? card.querySelector("p").innerText.toLowerCase() : "";
+
+        let matchesSearch = title.includes(searchText) || description.includes(searchText);
+        let matchesCategory = categoryValue === "all" || title.includes(categoryValue);
+        let matchesLevel = levelValue === "all" || description.includes(levelValue);
+        let matchesPrice = priceValue === "all" || description.includes(priceValue);
+
+        if (matchesSearch && matchesCategory && matchesLevel && matchesPrice) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    searchInput.addEventListener("input", filterCourses);
+    categoryFilter.addEventListener("change", filterCourses);
+    levelFilter.addEventListener("change", filterCourses);
+    priceFilter.addEventListener("change", filterCourses);
+  </script>
+
+</body>
+</html>

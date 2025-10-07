@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FDA Learning Portal - Sign In</title>
+  <link rel="stylesheet" href="css/style3.css">
+  <style>
+    body {
+      background: url("https://futuredigiassets.com/fda/assets/images/auth/01.png") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .auth-container {
+      background: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="auth-box">
+      <h2>SIGN IN</h2>
+      <p>Sign In to your FDA Learning Portal Account</p>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Email / FDA ID" required>
+        
+        <div class="password-field">
+          <input type="password" id="password" placeholder="Password" required>
+          <span class="eye-icon" onclick="togglePassword()">👁</span>
+        </div>
+
+        <div style="text-align: left; margin-bottom: 15px;">
+          <input type="checkbox" id="remember"> <label for="remember">Remember me?</label>
+        </div>
+
+        <button type="submit" class="btn-primary">Sign In</button>
+        <div style="margin-top: 15px;">
+          <a href="#" class="btn-link">Forgot Password?</a>
+        </div>
+        <div style="margin-top: 15px;">
+          Don’t have an account? <a href="signup.html" class="btn-link">Click here to sign up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Toggle password visibility
+    function togglePassword() {
+      const pwdField = document.getElementById("password");
+      pwdField.type = pwdField.type === "password" ? "text" : "password";
+    }
+
+    // Hardcoded login check
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username === "students123" && password === "pass123") {
+        window.location.href = "home.html"; // Redirect to dashboard
+      } else {
+        alert("Invalid FDA ID or Password!");
+      }
+    });
+  </script>
+
+</body>
+</html>
